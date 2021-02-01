@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmptyDataView" customModule="CM_UDEMY_APP" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="9oQ-56-BwP"/>
+                <outlet property="imageView" destination="G4q-Xg-p1p" id="CaG-rg-1h9"/>
+                <outlet property="reloadButton" destination="ngX-TG-N4u" id="nzy-UL-jIK"/>
+                <outlet property="subtitleLabel" destination="KaT-9d-gHO" id="hF3-3Q-Q2p"/>
+                <outlet property="titleLabel" destination="AwT-vt-KQq" id="dZg-JR-jSk"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="417"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="atA-1U-leX">
+                    <rect key="frame" x="14" y="46" width="386" height="351"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="E7d-T9-ov8">
+                            <rect key="frame" x="20" y="0.0" width="346" height="302"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="searchingBackground" translatesAutoresizingMaskIntoConstraints="NO" id="G4q-Xg-p1p">
+                                    <rect key="frame" x="0.0" y="0.0" width="346" height="186"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AwT-vt-KQq">
+                                    <rect key="frame" x="0.0" y="188" width="346" height="27.5"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                    <color key="textColor" red="0.87672978639999999" green="0.15828418729999999" blue="0.45774501560000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KaT-9d-gHO">
+                                    <rect key="frame" x="0.0" y="217.5" width="346" height="27.5"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                    <color key="textColor" red="0.87672978639999999" green="0.15828418729999999" blue="0.45774501560000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ngX-TG-N4u">
+                                    <rect key="frame" x="0.0" y="247" width="346" height="55"/>
+                                    <state key="normal" image="reloadButton"/>
+                                    <connections>
+                                        <action selector="reloadButtonPressed:" destination="-1" eventType="touchUpInside" id="o0J-dn-24s"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="E7d-T9-ov8" firstAttribute="top" secondItem="atA-1U-leX" secondAttribute="top" id="5JC-6I-Ta0"/>
+                        <constraint firstAttribute="trailing" secondItem="E7d-T9-ov8" secondAttribute="trailing" constant="20" id="FwI-fU-hry"/>
+                        <constraint firstItem="E7d-T9-ov8" firstAttribute="leading" secondItem="atA-1U-leX" secondAttribute="leading" constant="20" id="dUC-Yv-0Mh"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="atA-1U-leX" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="2" id="3RN-2A-lbf"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="atA-1U-leX" secondAttribute="bottom" constant="20" id="DFH-AX-kdP"/>
+                <constraint firstItem="atA-1U-leX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="14" id="DYL-Q4-d8S"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="atA-1U-leX" secondAttribute="trailing" constant="14" id="c1k-EJ-zEA"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="124.6376811594203" y="15.736607142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="reloadButton" width="316" height="55"/>
+        <image name="searchingBackground" width="187" height="186"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
